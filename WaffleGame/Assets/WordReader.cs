@@ -7,6 +7,7 @@ public class WordReader : MonoBehaviour
 {
     public TextAsset textFile;
     public string[] wordSet;
+    public WordFinder wordFinder;
     public Transform matrix;
     public static WordReader instance;
     // Start is called before the first frame update
@@ -19,6 +20,7 @@ public class WordReader : MonoBehaviour
     {
 
         GenerateWordSet();
+        SetFinalResult();
         SetWordSetToUpperCase();
         FillWordSetToMatrix();
 
@@ -116,5 +118,8 @@ public class WordReader : MonoBehaviour
             wordSet[i] = wordSet[i].ToUpper();
         }
     }
-
+    public void SetFinalResult()
+    {
+        wordFinder.FindDefinitonForWordSet(wordSet);
+    }
 }

@@ -57,6 +57,8 @@
     <Compile Include="Assets\WordTile.cs" />
     <Compile Include="Assets\WordReader.cs" />
     <Compile Include="Assets\SwapCounter.cs" />
+    <Compile Include="Assets\WordResult.cs" />
+    <Compile Include="Assets\WordFinder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\words.txt" />
