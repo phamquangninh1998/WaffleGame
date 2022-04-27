@@ -26,7 +26,7 @@ public class WordFinder : MonoBehaviour
                 byte[] result = req.downloadHandler.data;
                 string wordResult = System.Text.Encoding.Default.GetString(result);
 
-                Debug.Log(wordResult);
+               // Debug.Log(wordResult);
                 info = JsonUtility.FromJson<Result>("{\"Results\":" + wordResult + "}");
                 if (info.Results.Count > 0 && info.Results[0].meanings.Count > 0)
                 {

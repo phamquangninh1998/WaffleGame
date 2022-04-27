@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class WordReader : MonoBehaviour
 {
-    public TextAsset textFile;
+    public TextAsset wordPool;
+    public TextAsset definitionPool;
     public string[] wordSet;
-    public WordFinder wordFinder;
+    public string[] defitionSet;
     public Transform matrix;
     public static WordReader instance;
     // Start is called before the first frame update
@@ -61,29 +62,30 @@ public class WordReader : MonoBehaviour
 
     void GenerateWordSet() {
         wordSet = new string[6];
-        string[] array = textFile.text.Split(new[] { "\r","\n" }, System.StringSplitOptions.None);
+        string[] wordArray = wordPool.text.Split(new[] { "\n" }, System.StringSplitOptions.None);
+        string[] definitionArray = definitionPool.text.Split(new[] { "\n" }, System.StringSplitOptions.None);
 
         while (true) {
-            wordSet[0] = array[Random.Range(0, array.Length)];
+            wordSet[0] = wordArray[Random.Range(0, wordArray.Length)];
             if (wordSet[0].Length == 5) break;
         }
 
-        int length = array.Length;
+        int length = wordArray.Length;
         for (int i = 0; i < length; i++) {
-            if (array[i].Length == 5 && array[i][0] == wordSet[0][0] && array[i] != wordSet[0]) {
+            if (wordArray[i].Length == 5 && wordArray[i][0] == wordSet[0][0] && wordArray[i] != wordSet[0]) {
                 for (int j = 0; j < length; j++) {
-                    if (array[j].Length == 5 && array[j][0] == array[i][4] && array[j] != wordSet[0] && array[j] != array[i]) {
+                    if (wordArray[j].Length == 5 && wordArray[j][0] == wordArray[i][4] && wordArray[j] != wordSet[0] && wordArray[j] != wordArray[i]) {
                         for (int k = 0; k < length; k++) {
-                            if (array[k].Length == 5 && array[k][0] == wordSet[0][4] && array[k][4] == array[j][4] && array[k] != wordSet[0] && array[k] != array[j] && array[k] != array[i]) {
+                            if (wordArray[k].Length == 5 && wordArray[k][0] == wordSet[0][4] && wordArray[k][4] == wordArray[j][4] && wordArray[k] != wordSet[0] && wordArray[k] != wordArray[j] && wordArray[k] != wordArray[i]) {
                                 for (int h = 0; h < length; h++) {
-                                    if (array[h].Length == 5 && array[h][0] == array[i][2] && array[h][4] == array[k][2] && array[h] != wordSet[0] && array[h] != array[j] && array[h] != array[i] && array[h] != array[k]) {
+                                    if (wordArray[h].Length == 5 && wordArray[h][0] == wordArray[i][2] && wordArray[h][4] == wordArray[k][2] && wordArray[h] != wordSet[0] && wordArray[h] != wordArray[j] && wordArray[h] != wordArray[i] && wordArray[h] != wordArray[k]) {
                                         for (int g = 0; g < length; g++) {
-                                            if (array[g].Length == 5 && array[g][0] == wordSet[0][2] && array[g][2] == array[h][2] && array[g][4] == array[j][2] && array[g] != wordSet[0] && array[g] != array[j] && array[g] != array[i] && array[g] != array[k] && array[g] != array[h]) {
-                                                wordSet[1] = array[i];
-                                                wordSet[2] = array[j];
-                                                wordSet[3] = array[k];
-                                                wordSet[4] = array[h];
-                                                wordSet[5] = array[g];
+                                            if (wordArray[g].Length == 5 && wordArray[g][0] == wordSet[0][2] && wordArray[g][2] == wordArray[h][2] && wordArray[g][4] == wordArray[j][2] && wordArray[g] != wordSet[0] && wordArray[g] != wordArray[j] && wordArray[g] != wordArray[i] && wordArray[g] != wordArray[k] && wordArray[g] != wordArray[h]) {
+                                                wordSet[1] = wordArray[i];
+                                                wordSet[2] = wordArray[j];
+                                                wordSet[3] = wordArray[k];
+                                                wordSet[4] = wordArray[h];
+                                                wordSet[5] = wordArray[g];
                                                 for (int t = 0; t < 6; t++) {
                                                     Debug.Log(wordSet[t]);
                                                 }
@@ -111,6 +113,6 @@ public class WordReader : MonoBehaviour
     }
     public void SetFinalResult()
     {
-        wordFinder.FindDefinitonForWordSet(wordSet);
+       
     }
 }
