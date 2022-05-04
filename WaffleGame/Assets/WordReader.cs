@@ -8,8 +8,10 @@ public class WordReader : MonoBehaviour
     public TextAsset wordPool;
     public TextAsset definitionPool;
     public string[] wordSet;
-    public string[] defitionSet;
+    public string[] definitionSet;
     public Transform matrix;
+    public Transform wordResultParent;
+    public WordResult wordResultPrefab;
     public static WordReader instance;
     // Start is called before the first frame update
 
@@ -24,8 +26,17 @@ public class WordReader : MonoBehaviour
         SetFinalResult();
         SetWordSetToUpperCase();
         FillWordSetToMatrix();
-
         SuffleMatrix();
+        SetWordResult();
+    }
+
+    private void SetWordResult()
+    {
+        for (int i = 0; i < 6; i++)
+        {
+            WordResult newWordResult = Instantiate(wordResultPrefab, wordResultParent);
+            newWordResult.SetResult(wordSet[i], definitionSet[i]);
+        }
     }
 
     public string[] GetWordSet()
@@ -62,12 +73,17 @@ public class WordReader : MonoBehaviour
 
     void GenerateWordSet() {
         wordSet = new string[6];
-        string[] wordArray = wordPool.text.Split(new[] { "\n" }, System.StringSplitOptions.None);
-        string[] definitionArray = definitionPool.text.Split(new[] { "\n" }, System.StringSplitOptions.None);
+        definitionSet = new string[6];
+        string[] wordArray = wordPool.text.Split(new[] { "\r\n" }, System.StringSplitOptions.None);
+        string[] definitionArray = definitionPool.text.Split(new[] { "\r\n" }, System.StringSplitOptions.None);
 
+        int count = 0;
         while (true) {
-            wordSet[0] = wordArray[Random.Range(0, wordArray.Length)];
-            if (wordSet[0].Length == 5) break;
+            count++;
+            int i = Random.Range(0, wordArray.Length);
+            wordSet[0] = wordArray[i];
+            definitionSet[0] = definitionArray[i];
+            if (wordSet[0].Length == 5||count==9999) break;
         }
 
         int length = wordArray.Length;
@@ -86,8 +102,14 @@ public class WordReader : MonoBehaviour
                                                 wordSet[3] = wordArray[k];
                                                 wordSet[4] = wordArray[h];
                                                 wordSet[5] = wordArray[g];
+                                                definitionSet[1] = definitionArray[i];
+                                                definitionSet[2] = definitionArray[j];
+                                                definitionSet[3] = definitionArray[k];
+                                                definitionSet[4] = definitionArray[h];
+                                                definitionSet[5] = definitionArray[g];
                                                 for (int t = 0; t < 6; t++) {
                                                     Debug.Log(wordSet[t]);
+                                                    Debug.Log(definitionSet[t]);
                                                 }
                                                 return;
                                             }

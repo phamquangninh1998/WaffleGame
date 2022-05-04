@@ -26,6 +26,10 @@ public class SwapCounter : MonoBehaviour
 
     public void ConsumSwap()
     {
+        if (swapsRemain == 1)
+        {
+            GameController.instance.EndGame();
+        }
         swapsRemain--;
         SetSwapText();
     }

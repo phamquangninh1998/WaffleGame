@@ -518,6 +518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94a7cc493242cf842a8039058bef4b13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  worldResult: {fileID: 824604116}
 --- !u!1 &158701288
 GameObject:
   m_ObjectHideFlags: 0
@@ -1708,7 +1709,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &824604117
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1725,7 +1726,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 128, y: -491}
+  m_AnchoredPosition: {x: 128, y: -258}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &824604118
@@ -2163,7 +2164,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: 15
 --- !u!222 &964464750
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2380,7 +2381,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 303}
+  m_AnchoredPosition: {x: 0, y: 511}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1039360463
@@ -3754,7 +3755,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 193}
+  m_AnchoredPosition: {x: 0, y: 517}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1941160466
@@ -4487,10 +4488,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2582db6307002347a1398b2dc3439ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wordPool: {fileID: 0}
-  definitionPool: {fileID: 0}
-  wordSet: []
+  wordPool: {fileID: 4900000, guid: 20e0d2cc4da82415dac66886de233960, type: 3}
+  definitionPool: {fileID: 4900000, guid: 1dd4c6694c0b1473da286a2271ea14ea, type: 3}
+  wordSet:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  definitionSet:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   matrix: {fileID: 1792598901}
+  wordResultParent: {fileID: 824604117}
+  wordResultPrefab: {fileID: 8117111830376141920, guid: ea9315a633f3c4149975079156b98702, type: 3}
 --- !u!4 &2146260465
 Transform:
   m_ObjectHideFlags: 0
