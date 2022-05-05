@@ -12,7 +12,6 @@ public class WordTile : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     public string startValue;
 
     public string currentValue;
-
     public Text textValue;
     private RectTransform rectTransform;
     Vector2 startPosition;
@@ -22,9 +21,9 @@ public class WordTile : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
     CanvasGroup canvasGroup;
     public Image backImage;
-    public Color correctColor;
-    public Color almostCorrectColor;
-    public Color wrongColor;
+    public Sprite correctSprite;
+    public Sprite almostCorrectSprite;
+    public Sprite wrongSprite;
 
     public bool draggable = true;
     private void Awake()
@@ -101,7 +100,7 @@ public class WordTile : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     {
         if (currentValue == startValue)
         {
-            backImage.color = correctColor;
+            backImage.sprite = correctSprite;
             draggable = false;
             return;
         }
@@ -112,7 +111,7 @@ public class WordTile : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
             WordTile wordInColumn = wordMatrixTransform.GetChild(i).GetChild(column).GetComponent<WordTile>();
             if (wordInColumn != null && wordInColumn.startValue == currentValue && column != 1 && column != 3)
             {
-                backImage.color = almostCorrectColor;
+                backImage.sprite = almostCorrectSprite;
                 return;
             }
         }
@@ -122,12 +121,12 @@ public class WordTile : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
             WordTile wordInRow = wordMatrixTransform.GetChild(row).GetChild(i).GetComponent<WordTile>();
             if (wordInRow != null && wordInRow.startValue == currentValue && row != 1 && row != 3)
             {
-                backImage.color = almostCorrectColor;
+                backImage.sprite = almostCorrectSprite;
                 return;
             }
         }
 
-        backImage.color = wrongColor;
+        backImage.sprite = wrongSprite;
     }
 
     public void OnDrop(PointerEventData eventData)

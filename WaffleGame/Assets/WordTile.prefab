@@ -61,15 +61,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.13756847, g: 1, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 4f9964e38e54fd647bf085cab3aa5183, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -97,9 +97,10 @@ MonoBehaviour:
   row: 0
   column: 0
   backImage: {fileID: 3615626830245764931}
-  correctColor: {r: 0.13965881, g: 1, b: 0, a: 1}
-  almostCorrectColor: {r: 1, g: 0.8193936, b: 0, a: 1}
-  wrongColor: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 0.79607844}
+  correctSprite: {fileID: 21300000, guid: 5f6410640b4a2f24aa7ccd502bd3c113, type: 3}
+  almostCorrectSprite: {fileID: 21300000, guid: 19bc6652379139843b5b3189ecc3b275, type: 3}
+  wrongSprite: {fileID: 21300000, guid: 10954f5707dbccd468efa66e061dacf2, type: 3}
+  draggable: 1
 --- !u!225 &7617677312758991353
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -178,12 +179,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 52
+    m_Font: {fileID: 12800000, guid: adc216948caeedc4bb1d21bc1c2c7ea9, type: 3}
+    m_FontSize: 74
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 52
+    m_MaxSize: 74
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 0
