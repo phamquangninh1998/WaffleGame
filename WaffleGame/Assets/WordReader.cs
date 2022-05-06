@@ -74,8 +74,8 @@ public class WordReader : MonoBehaviour
     void GenerateWordSet() {
         wordSet = new string[6];
         definitionSet = new string[6];
-        string[] wordArray = wordPool.text.Split(new[] { "\r\n" }, System.StringSplitOptions.None);
-        string[] definitionArray = definitionPool.text.Split(new[] { "\r\n" }, System.StringSplitOptions.None);
+        string[] wordArray = wordPool.text.Split(new[] { "\n" }, System.StringSplitOptions.None);
+        string[] definitionArray = definitionPool.text.Split(new[] { "\n" }, System.StringSplitOptions.None);
 
         int count = 0;
         while (true) {
@@ -128,6 +128,7 @@ public class WordReader : MonoBehaviour
 
     void SetWordSetToUpperCase()
     {
+        Debug.Log("Set to upper case");
         for (int i = 0; i < wordSet.Length; i++)
         {
             wordSet[i] = wordSet[i].ToUpper();

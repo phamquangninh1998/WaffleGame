@@ -23,6 +23,7 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.TileDragAndDropManager
     - UnityEditor.Tilemaps.TilemapPrefabStageHelper
     Unity.Rider.Editor.dll:
+    - Packages.Rider.Editor.RiderScriptEditorData
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -35,6 +36,9 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Mask
+    - UnityEngine.UI.ScrollRect
+    - UnityEngine.UI.Scrollbar
     - UnityEngine.UI.Text
     - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
@@ -62,29 +66,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1456}
     - Class: 114
-      Script: {instanceID: 1598}
+      Script: {instanceID: 1638}
     - Class: 114
-      Script: {instanceID: 1942}
+      Script: {instanceID: 1982}
     - Class: 114
-      Script: {instanceID: 2622}
+      Script: {instanceID: 2662}
     - Class: 114
-      Script: {instanceID: 2688}
+      Script: {instanceID: 2728}
     - Class: 114
-      Script: {instanceID: 2784}
+      Script: {instanceID: 2824}
     - Class: 114
-      Script: {instanceID: 3000}
+      Script: {instanceID: 3040}
     - Class: 114
-      Script: {instanceID: 3164}
+      Script: {instanceID: 3204}
     - Class: 114
-      Script: {instanceID: 3246}
+      Script: {instanceID: 3286}
     - Class: 114
-      Script: {instanceID: 3358}
+      Script: {instanceID: 3296}
     - Class: 114
-      Script: {instanceID: 3742}
+      Script: {instanceID: 3398}
     - Class: 114
-      Script: {instanceID: 5066}
+      Script: {instanceID: 3782}
     - Class: 114
-      Script: {instanceID: 5574}
+      Script: {instanceID: 4398}
+    - Class: 114
+      Script: {instanceID: 4594}
+    - Class: 114
+      Script: {instanceID: 5106}
+    - Class: 114
+      Script: {instanceID: 5614}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -136,7 +146,7 @@ ScriptsOnlyBuild:
     className: SpriteSkin
   - hash:
       serializedVersion: 2
-      Hash: ae4a6851bdb5a2da3437b6c44e0a3698
+      Hash: a6ed1dc522a3a03a48caf800e4e67d97
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameController
@@ -250,7 +260,7 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
-      Hash: 146d5c7dd15d90500084ead3ea872bbe
+      Hash: 9f7456f8b2acb0352db9f4d69ba6e228
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: WordTile
@@ -665,4 +675,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: D:/UnityProject/WaffleGame/WaffleGame/Build/build0.apk
+  playerPath: /Users/sgs/Documents/GitHub/WaffleGame/WaffleGame/Build/build0.apk
