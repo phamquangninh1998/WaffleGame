@@ -26,9 +26,13 @@ public class SwapCounter : MonoBehaviour
 
     public void ConsumSwap()
     {
-        if (swapsRemain == 1)
-        {
-            GameController.instance.EndGame();
+        if (swapsRemain == 1 && !WordMatrix.instance.WonGame()) {
+            GameController.instance.LoseGame();
+            WordMatrix.instance.SetLoseMatrixState();
+        } else {
+            if (WordMatrix.instance.WonGame()) {
+                GameController.instance.WinGame();
+            }
         }
         swapsRemain--;
         SetSwapText();

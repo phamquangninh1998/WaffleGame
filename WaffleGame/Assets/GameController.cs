@@ -11,6 +11,9 @@ public class GameController : MonoBehaviour
     public GameObject instructionButton;
     public GameObject instructionParent;
     public GameObject swapCountParent;
+    public GameObject winGameBanner;
+    public GameObject loseGameBanner;
+    public GameObject nextLevelButton;
     private void Start()
     {
         instance = this;
@@ -19,16 +22,12 @@ public class GameController : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-
-    public void EndGame()
-    {
-        ShowResultInstruction();
-        swapCountParent.gameObject.SetActive(false);
-    }
+    
 
     private void ShowResultInstruction()
     {
         worldResult.SetActive(true);
+        nextLevelButton.SetActive(true);
     }
 
     public void OnInstructionButtonClick() {
@@ -42,8 +41,19 @@ public class GameController : MonoBehaviour
     public void ShowInstruction() {
         instructionParent.SetActive(true);
     }
-    
+    public void ShowWingamBanner() {
+        winGameBanner.SetActive(true);
+    }
+    public void ShowLoseGameBanner() {
+        loseGameBanner.SetActive(true);
+    }
     public  void WinGame() {
-       
+      ShowResultInstruction();
+       ShowWingamBanner();
+    }
+    
+    public  void LoseGame() {
+        ShowResultInstruction();
+        ShowLoseGameBanner();
     }
 }

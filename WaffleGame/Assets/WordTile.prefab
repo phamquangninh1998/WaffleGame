@@ -100,6 +100,7 @@ MonoBehaviour:
   correctSprite: {fileID: 21300000, guid: 5f6410640b4a2f24aa7ccd502bd3c113, type: 3}
   almostCorrectSprite: {fileID: 21300000, guid: 19bc6652379139843b5b3189ecc3b275, type: 3}
   wrongSprite: {fileID: 21300000, guid: 10954f5707dbccd468efa66e061dacf2, type: 3}
+  blockSprite: {fileID: 21300000, guid: f6354371961cb8e409ac1c116f67a2d2, type: 3}
   draggable: 1
 --- !u!225 &7617677312758991353
 CanvasGroup:

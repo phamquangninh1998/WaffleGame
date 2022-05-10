@@ -24,11 +24,10 @@ public class WordTile : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     public Sprite correctSprite;
     public Sprite almostCorrectSprite;
     public Sprite wrongSprite;
+    public Sprite blockSprite;
 
-    public static int correctTileNumber;
     public bool draggable = true;
     private void Awake() {
-        correctTileNumber = 0;
         wordMatrixTransform = transform.parent.parent;
 
         row = transform.parent.GetSiblingIndex();
@@ -103,10 +102,6 @@ public class WordTile : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         {
             backImage.sprite = correctSprite;
             draggable = false;
-            correctTileNumber++;
-            if (correctTileNumber == 21) {
-                GameController.instance.WinGame();
-            }
             return;
         }
 
@@ -145,5 +140,10 @@ public class WordTile : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         SwapValue(otherWord);
         SwapCounter.instance.ConsumSwap();
         Debug.Log(currentValue + "      " + otherWord.currentValue);
+    }
+
+    public void SetLoseState() {
+        backImage.sprite = blockSprite;
+        draggable = false;
     }
 }

@@ -19,9 +19,7 @@ public class WordReader : MonoBehaviour
     {
         instance = this;
     }
-    void Start()
-    {
-
+    void Start() {
         GenerateWordSet();
         SetFinalResult();
         SetWordSetToUpperCase();
