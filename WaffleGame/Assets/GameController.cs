@@ -42,4 +42,8 @@ public class GameController : MonoBehaviour
     public void ShowInstruction() {
         instructionParent.SetActive(true);
     }
+    
+    public  void WinGame() {
+       
+    }
 }

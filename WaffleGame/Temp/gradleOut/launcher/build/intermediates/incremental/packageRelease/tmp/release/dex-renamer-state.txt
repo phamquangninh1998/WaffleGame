@@ -1,4 +1,0 @@
-#Fri May 06 12:07:09 ICT 2022
-base.0=/Users/sgs/Documents/GitHub/WaffleGame/WaffleGame/Temp/gradleOut/launcher/build/intermediates/dex/release/mergeDexRelease/classes.dex
-path.0=classes.dex
-renamed.0=classes.dex

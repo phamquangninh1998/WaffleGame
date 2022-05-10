@@ -32,6 +32,7 @@ public class SwapCounter : MonoBehaviour
         }
         swapsRemain--;
         SetSwapText();
+
     }
 
     public bool EnoughSwapToConsume()
