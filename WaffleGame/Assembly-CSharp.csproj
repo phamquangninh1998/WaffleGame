@@ -57,9 +57,9 @@
      <Compile Include="Assets\WordTile.cs" />
      <Compile Include="Assets\WordReader.cs" />
      <Compile Include="Assets\WordFinder.cs" />
+     <Compile Include="Assets\WordMatrix.cs" />
      <Compile Include="Assets\SwapCounter.cs" />
      <Compile Include="Assets\WordScanner.cs" />
-     <Compile Include="Assets\WordMatrix.cs" />
      <None Include="Assets\wordPool.txt" />
      <None Include="Assets\words.txt" />
      <None Include="Assets\DefinitionPool.txt" />
