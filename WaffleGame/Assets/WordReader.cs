@@ -28,6 +28,9 @@ public class WordReader : MonoBehaviour
         SetWordResult();
     }
 
+    public void RestartMatrix() {
+        
+    }
     private void SetWordResult()
     {
         for (int i = 0; i < 6; i++)
