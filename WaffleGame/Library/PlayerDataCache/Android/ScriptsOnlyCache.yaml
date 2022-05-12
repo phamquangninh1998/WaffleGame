@@ -3,6 +3,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - GameController
     - SwapCounter
+    - WordMatrix
     - WordReader
     - WordResult
     - WordScanner
@@ -11,13 +12,10 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
-    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
-    - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
@@ -66,35 +64,37 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1456}
     - Class: 114
-      Script: {instanceID: 1638}
+      Script: {instanceID: 1596}
     - Class: 114
-      Script: {instanceID: 1982}
+      Script: {instanceID: 1940}
     - Class: 114
-      Script: {instanceID: 2662}
+      Script: {instanceID: 2620}
     - Class: 114
-      Script: {instanceID: 2728}
+      Script: {instanceID: 2686}
     - Class: 114
-      Script: {instanceID: 2824}
+      Script: {instanceID: 2782}
     - Class: 114
-      Script: {instanceID: 3040}
+      Script: {instanceID: 2998}
     - Class: 114
-      Script: {instanceID: 3204}
+      Script: {instanceID: 3162}
     - Class: 114
-      Script: {instanceID: 3286}
+      Script: {instanceID: 3244}
     - Class: 114
-      Script: {instanceID: 3296}
+      Script: {instanceID: 3254}
     - Class: 114
-      Script: {instanceID: 3398}
+      Script: {instanceID: 3356}
     - Class: 114
-      Script: {instanceID: 3782}
+      Script: {instanceID: 3740}
     - Class: 114
-      Script: {instanceID: 4398}
+      Script: {instanceID: 4356}
     - Class: 114
-      Script: {instanceID: 4594}
+      Script: {instanceID: 4498}
     - Class: 114
-      Script: {instanceID: 5106}
+      Script: {instanceID: 4554}
     - Class: 114
-      Script: {instanceID: 5614}
+      Script: {instanceID: 5066}
+    - Class: 114
+      Script: {instanceID: 5574}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -146,7 +146,7 @@ ScriptsOnlyBuild:
     className: SpriteSkin
   - hash:
       serializedVersion: 2
-      Hash: a6ed1dc522a3a03a48caf800e4e67d97
+      Hash: 5f6ec021a70d8b812bd32d0e25b84586
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameController
@@ -260,7 +260,7 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
-      Hash: 9f7456f8b2acb0352db9f4d69ba6e228
+      Hash: bd1f994faea2caccb618e5832084b637
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: WordTile
@@ -546,6 +546,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ControlTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WordMatrix
   - hash:
       serializedVersion: 2
       Hash: 3165968ba45c74472d279ba04455fccb
