@@ -25,6 +25,7 @@ public class WordTile : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     public Sprite almostCorrectSprite;
     public Sprite wrongSprite;
     public Sprite blockSprite;
+    public Sprite whiteSprite;
 
     public bool draggable = true;
     private void Awake() {
@@ -98,6 +99,7 @@ public class WordTile : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
     private void SetColorBaseOnCurrentValue()
     {
+        backImage.color=Color.white;
         if (currentValue == startValue)
         {
             backImage.sprite = correctSprite;
@@ -145,5 +147,16 @@ public class WordTile : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     public void SetLoseState() {
         backImage.sprite = blockSprite;
         draggable = false;
+    }
+    
+    public void Recover() {
+        textValue.text = "" + startValue;
+        backImage.sprite = whiteSprite;
+        backImage.color=Color.red;
+    }
+    
+    public void UnRecover() {
+        textValue.text = "" + currentValue;
+        SetColorBaseOnCurrentValue();
     }
 }

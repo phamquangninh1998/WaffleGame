@@ -24,6 +24,10 @@ public class SwapCounter : MonoBehaviour
         swapText.text = "" + swapsRemain;
     }
 
+    public void ResetCounter() {
+        swapsRemain = 15;
+        SetSwapText();
+    }
     public void ConsumSwap()
     {
         if (swapsRemain == 1 && !WordMatrix.instance.WonGame()) {

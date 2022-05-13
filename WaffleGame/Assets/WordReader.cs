@@ -28,8 +28,11 @@ public class WordReader : MonoBehaviour
         SetWordResult();
     }
 
-    public void RestartMatrix() {
-        
+    public void ResetMatrix() {
+        SetWordSetToUpperCase();
+        FillWordSetToMatrix();
+        SuffleMatrix();
+        SetWordResult();
     }
     private void SetWordResult()
     {

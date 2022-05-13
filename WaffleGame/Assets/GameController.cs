@@ -18,10 +18,7 @@ public class GameController : MonoBehaviour
     {
         instance = this;
     }
-    public void RestartGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
+    
     
 
     private void ShowResultInstruction()
@@ -37,7 +34,10 @@ public class GameController : MonoBehaviour
         instructionButton.SetActive(true);
         instructionParent.SetActive(false);
     }
-
+    public void RestartGame() {
+        WordReader.instance.ResetMatrix();
+        SwapCounter.instance.ResetCounter();
+    }
     public void ShowInstruction() {
         instructionParent.SetActive(true);
     }
