@@ -27,6 +27,7 @@ public class WordScanner : MonoBehaviour
     {
         for (int i = 0; i < wordList.Length; i++)
         {
+            if(wordList[i].Length!=5) continue;
             String APIrq = "https://api.dictionaryapi.dev/api/v2/entries/en/";
             using (UnityWebRequest req = UnityWebRequest.Get(APIrq + wordList[i]))
             {
@@ -42,7 +43,7 @@ public class WordScanner : MonoBehaviour
 
                     if (info.Results.Count > 0 && info.Results[0].meanings.Count > 0) {
                         Debug.Log(stringJsonResult);
-                        //WriteWordToFile(wordList[i], info.Results[0].meanings[0].definitions[0].definition);
+                        WriteWordToFile(wordList[i], info.Results[0].meanings[0].definitions[0].definition);
                     }
                 }
                 
@@ -50,16 +51,16 @@ public class WordScanner : MonoBehaviour
         }
     }
 
-    //public void WriteWordToFile(string word, string def) {
-    //    using (StreamWriter wordStreamWriter = File.AppendText(AssetDatabase.GetAssetPath(WordPool)))
-    //    {
-    //        wordStreamWriter.WriteLine(word);
-    //    }
-    //    using (StreamWriter defStreamWriter = File.AppendText(AssetDatabase.GetAssetPath(DefinitionPool)))
-    //    {
-    //        defStreamWriter.WriteLine(def);
-    //    }
-    //    EditorUtility.SetDirty(WordPool);
-    //    EditorUtility.SetDirty(DefinitionPool);
-    //}
+    public void WriteWordToFile(string word, string def) {
+        using (StreamWriter wordStreamWriter = File.AppendText(AssetDatabase.GetAssetPath(WordPool)))
+        {
+            wordStreamWriter.WriteLine(word);
+        }
+        using (StreamWriter defStreamWriter = File.AppendText(AssetDatabase.GetAssetPath(DefinitionPool)))
+        {
+            defStreamWriter.WriteLine(def);
+        }
+        EditorUtility.SetDirty(WordPool);
+        EditorUtility.SetDirty(DefinitionPool);
+    }
 }

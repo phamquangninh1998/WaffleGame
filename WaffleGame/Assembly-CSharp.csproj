@@ -60,9 +60,9 @@
      <Compile Include="Assets\WordMatrix.cs" />
      <Compile Include="Assets\SwapCounter.cs" />
      <Compile Include="Assets\WordScanner.cs" />
-     <None Include="Assets\wordPool.txt" />
-     <None Include="Assets\words.txt" />
-     <None Include="Assets\DefinitionPool.txt" />
+     <None Include="Assets\TextFile\wordPool.txt" />
+     <None Include="Assets\TextFile\words.txt" />
+     <None Include="Assets\TextFile\DefinitionPool.txt" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.16f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
